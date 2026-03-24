@@ -33,6 +33,7 @@ uv pip install \
     --no-cache-dir
 
 cat > activate_quant.sh << EOF
+export PATH="$HOME/.local/bin:$PATH"
 export HF_HOME="$HF_HOME"
 export HF_HUB_ENABLE_HF_TRANSFER=1
 source $WORKSPACE_DIR/venv-quant/bin/activate
@@ -54,6 +55,7 @@ uv pip install \
     --index-strategy unsafe-best-match
 
 cat > activate_vllm.sh << EOF
+export PATH="$HOME/.local/bin:$PATH"
 export HF_HOME="$HF_HOME"
 export HF_HUB_ENABLE_HF_TRANSFER=1
 source $WORKSPACE_DIR/venv-vllm/bin/activate
